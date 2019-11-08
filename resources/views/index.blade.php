@@ -41,8 +41,8 @@
 <body class=" ">
 
 <div class="content-wrapper">
-    
-    @include('includes\header')
+
+    @include('includes/header')
 
     <div class="header-spacer"></div>
 
@@ -223,7 +223,7 @@
                                     </div>
                                 </div>
                             @endforeach
-    
+
                         </div>
                     </div>
                 </div>
@@ -255,7 +255,7 @@
                             </div>
                             @endforeach
 
-                            
+
                         </div>
                     </div>
                 </div>
