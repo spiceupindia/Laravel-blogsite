@@ -12,6 +12,6 @@ $factory->define(Model::class, function (Faker $faker) {
         'user_id' => $faker->randomDigit,
         'category_id' => $faker->randomDigit,
         'content' =>$faker->paragraph(3),
-        'featured' => asset('uploads/posts/'.sample.jpg),
+        'featured' => asset('uploads/posts/sample.jpg'),
     ];
 });
