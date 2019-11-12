@@ -119,7 +119,7 @@ Route::group(['middleware' => 'auth'], function(){
         'uses' => 'PostsController@store',
         'as' => 'posts.store'
     ]);
-    
+
     Route::get('/posts',[
         'uses' => 'PostsController@index',
         'as' => 'posts.index'
@@ -129,7 +129,7 @@ Route::group(['middleware' => 'auth'], function(){
         'uses' => 'PostsController@show',
         'as' => 'post.show'
     ]);
-    
+
     Route::get('/posts/edit/{post}',[
         'uses' => 'PostsController@edit',
         'as' => 'post.edit'
@@ -142,7 +142,7 @@ Route::group(['middleware' => 'auth'], function(){
         'uses' => 'PostsController@destroy',
         'as' => 'post.delete'
     ]);
-    
+
     Route::get('/category/create',[
         'uses' => 'CategoriesController@create',
         'as' => 'category.create'
@@ -264,7 +264,7 @@ Route::group(['middleware' => 'auth'], function(){
         'as' => 'setting.update'
     ]);
 
-   
+
 
 
 

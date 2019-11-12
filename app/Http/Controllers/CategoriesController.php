@@ -43,9 +43,9 @@ class CategoriesController extends Controller
         $category = new Category();
         $category->name = $request->name;
         $category->save();
-        
+
         Session::flash('success', 'Category Created Successfully');
-        return redirect()->route('category.index');     
+        return redirect()->route('category.index');
     }
 
     /**
@@ -85,9 +85,9 @@ class CategoriesController extends Controller
 
         $category->name = $request->name;
         $category->save();
-        
+
         Session::flash('success', 'Category Updated Successfully');
-        return redirect()->route('category.index');  
+        return redirect()->route('category.index');
     }
 
     /**
@@ -104,7 +104,7 @@ class CategoriesController extends Controller
 
         $category->delete();
         Session::flash('success', 'Category Deleted Successfully');
-        return redirect()->route('category.index'); 
+        return redirect()->route('category.index');
 
     }
 }
