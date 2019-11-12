@@ -10,15 +10,16 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ secure_asset('js/app.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/toastr.min.css') }}" rel="stylesheet">
+
+    <link href="{{ secure_asset('css/toastr.min.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('/css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -28,7 +29,7 @@
                 <div class="alert alert-success">
                     {{ session()->get('success') }}
                 </div>
-            @endif   
+            @endif
             @if(session()->has('info'))
                 <div class="alert alert-info">
                     {{ session()->get('info') }}
@@ -61,12 +62,12 @@
                             <li class="list-group-item">
                                 <a href="{{ route('posts.index') }}">All Posts</a>
                             </li>
-                           
+
                             <li class="list-group-item">
                                 <a href="{{ route('posts.trashed') }}">All Trashed Posts</a>
                             </li>
 
-                           
+
 
                             @if(Auth::user()->admin)
                                 <li class="list-group-item">

@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>{{ $settings->site_name }}</title>
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/fonts.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/crumina-fonts.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/normalize.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/grid.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/styles.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset('app/css/fonts.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset('app/css/crumina-fonts.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset('app/css/normalize.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset('app/css/grid.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset('app/css/styles.css')}}">
 
 
     <!--Plugins styles-->
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/jquery.mCustomScrollbar.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/swiper.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/primary-menu.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/magnific-popup.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset('app/css/jquery.mCustomScrollbar.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset('app/css/swiper.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset('app/css/primary-menu.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset('app/css/magnific-popup.css')}}">
 
-    <link href="{{ asset('css/toastr.min.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/toastr.min.css') }}" rel="stylesheet">
 
     <!--Styles for RTL-->
 
@@ -43,17 +43,17 @@
 <body class=" ">
 
 <div class="content-wrapper">
-    
-    @include('includes\header')
 
-    @yield('content')  
+    @include('includes.header')
+
+    @yield('content')
 
 
     @include('includes.form')
 
 </div>
 
-    @include('includes\footer')
+    @include('includes.footer')
 
     <svg style="display:none;">
         <symbol id="arrow-left" viewBox="122.9 388.2 184.3 85">
@@ -87,10 +87,10 @@
               L6.01189661,12.4115388 C4.23965876,13.1816085 3,14.9491311 3,17 C3,19.7614237 5.23249418,22 7.99943992,22 L16,22 L16,16 L12.75,19.25
                L12,18.5 L16.5,14 L21,18.5 L20.25,19.25 L17,16 L17,22 L17,22 Z M16,22 L16,27 L17,27 L17,22 L16,22 L16,22 Z" id="cloud-upload"></path>
         </symbol>
-    
+
     </svg>
 
-    @include('includes\search')
+    @include('includes.search')
 
 
 
