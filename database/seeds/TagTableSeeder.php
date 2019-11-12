@@ -12,6 +12,19 @@ class TagTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Tag::class,5)->create();
+        \App\Tag::create([
+            'id' => '1',
+            'tag' => 'php'
+        ]);
+
+        \App\Tag::create([
+            'id' => '2',
+            'tag' => 'seo'
+        ]);
+
+        \App\Tag::create([
+            'id' => '3',
+            'tag' => 'laravel'
+        ]);
     }
 }

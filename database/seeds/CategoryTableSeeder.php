@@ -12,6 +12,14 @@ class CategoryTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Category::class,5)->create();
+        \App\Category::create([
+            'id' => '1',
+            'name' => 'Laravel'
+        ]);
+
+        \App\Category::create([
+            'id' => '2',
+            'name' => 'PHP'
+        ]);
     }
 }
