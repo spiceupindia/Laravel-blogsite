@@ -24,7 +24,7 @@
                                    @foreach($posts as $post)
                                      <tr>
                                          <td>
-                                            <img src="{{ asset('uploads/posts/'.$post->featured) }}" alt="{{$post->title}}" width="90px" height="50px">
+                                            <img src="{{ asset($post->featured) }}" alt="{{$post->title}}" width="90px" height="50px">
                                          </td>
                                          <td>
                                              <a href="{{route('post.show',['id'=> $post->id])}}">{{$post->title}}</a>
