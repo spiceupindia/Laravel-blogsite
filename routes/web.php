@@ -26,7 +26,7 @@ Route::get('/post/{slug}',[
     'as' => 'post.single'
 ]);
 
-Route::get('/tag/{id}',[
+Route::get('/tags/{id}',[
     'uses' => 'FrontendController@tag',
     'as' => 'tag.single'
 ]);
