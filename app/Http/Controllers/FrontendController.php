@@ -22,8 +22,8 @@ class FrontendController extends Controller
                     ->with('first_post', Post::orderBy('created_at', 'desc')->first())
                     ->with('second_post', Post::orderBy('created_at', 'desc')->skip(1)->take(1)->get()->first())
                     ->with('third_post', Post::orderBy('created_at', 'desc')->skip(2)->take(1)->get()->first())
-                    ->with('career', Category::find(5))
-                    ->with('tutorials', Category::find(4));
+                    ->with('laravel', Category::find(1))
+                    ->with('php', Category::find(2));
    }
 
    public function category(Category $category){
