@@ -319,7 +319,7 @@
 
 <!-- Overlay Search -->
 
-@include('includes\search')
+@include('includes.search')
 
 <!-- End Overlay Search -->
 
