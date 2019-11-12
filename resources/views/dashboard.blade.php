@@ -24,15 +24,15 @@
                                    @foreach($posts as $post)
                                      <tr>
                                          <td>
-                                            <img src="{{ $post->featured }}" alt="{{$post->title}}" width="90px" height="50px">
+                                            <img src="{{ asset($post->featured) }}" alt="{{$post->title}}" width="90px" height="50px">
                                          </td>
                                          <td>
                                              <a href="{{route('post.show',['id'=> $post->id])}}">{{$post->title}}</a>
                                          </td>
                                          <td>
-                                            <a href="{{ route('post.delete',['id' => $post->id ])}}" class="btn btn-sm btn-warning">Trash</a> 
+                                            <a href="{{ route('post.delete',['id' => $post->id ])}}" class="btn btn-sm btn-warning">Trash</a>
                                          </td>
-                                         
+
                                      </tr>
                                    @endforeach
                                @else
@@ -43,7 +43,7 @@
                            </tbody>
                         </table>
 
-                    
+
                 </div>
             </div>
         </div>
