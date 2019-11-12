@@ -32,7 +32,7 @@ Route::get('/tags/{id}',[
 ]);
 
 Route::get('/home',function(){
-    return view('home');
+    return view('index');
 });
 
 Route::get('/results', [
