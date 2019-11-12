@@ -31,9 +31,6 @@ Route::get('/tags/{id}',[
     'as' => 'tag.single'
 ]);
 
-Route::get('/home',function(){
-    return view('dashboard');
-});
 
 Route::get('/results', [
     'uses' => 'FrontendController@search',
