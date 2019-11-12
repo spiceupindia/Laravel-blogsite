@@ -64,8 +64,8 @@ class PostsController extends Controller
 
         $featured_new_name = time().$featured->getClientOriginalName();
 
-        $featured->move('uploads/posts',$featured_new_name);   
-        
+        $featured->move('uploads/posts',$featured_new_name);
+
         $user_id = Auth::id();
 
         //Mass Assignment
@@ -84,7 +84,7 @@ class PostsController extends Controller
 
         Session::flash('success', 'Post Created Successfully');
         return redirect()->route('posts.index');
-        
+
     }
 
     /**
@@ -130,7 +130,7 @@ class PostsController extends Controller
             $featured = $request->featured;
             $featured_new_name = time(). $featured->getClientOriginalName();
             $featured->move('uploads/posts', $featured_new_name);
-            $post->featured = 'uploads/posts/'.$featured_new_name;
+            $post->featured = asset('uploads/posts/'.$featured_new_name);
         }
 
         $post->title = $request->title;
