@@ -200,12 +200,12 @@ Route::group(['middleware' => 'auth'], function(){
         'as' => 'tag.update'
     ]);
 
-    Route::get('tags/index',[
+    Route::get('tag/index',[
         'uses' => 'TagsController@index',
         'as' => 'tags.index'
     ]);
 
-    Route::get('tags/delete/{tag}',[
+    Route::get('tag/delete/{tag}',[
         'uses' => 'TagsController@destroy',
         'as' => 'tag.delete'
     ]);
