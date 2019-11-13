@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 @section('content')
 
-<div class="content-wrapper">
+
 
         <!-- Stunning Header -->
 
@@ -160,6 +160,7 @@
                             </div>
                         </div>
 
+
                         @include('includes/disqus')
 
 
@@ -199,7 +200,7 @@
 
 
 
-</div>
+
 
 
 
