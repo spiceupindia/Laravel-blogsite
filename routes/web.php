@@ -96,13 +96,6 @@ Route::get('/test/tags/posts', function(){
     return App\Tag::find(2)->posts;
 });
 
-
-
-
-
-
-
-
 //Route::resource('posts','PostsController');
 
 
