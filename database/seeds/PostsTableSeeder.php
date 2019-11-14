@@ -29,7 +29,7 @@ class PostsTableSeeder extends Seeder
             'user_id' => '1',
             'category_id' => '2',
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto excepturi in temporibus natus laboriosam mollitia architecto ullam assumenda cumque incidunt omnis, dolorum aliquid aliquam obcaecati saepe repellat iste illum modi.',
-            'featured' => asset('uploads/posts/sample.jpg'),
+            'featured' => secure_asset('uploads/posts/sample.jpg'),
         ]);
 
         \App\Post::create([
@@ -39,7 +39,7 @@ class PostsTableSeeder extends Seeder
             'user_id' => '2',
             'category_id' => '1',
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto excepturi in temporibus natus laboriosam mollitia architecto ullam assumenda cumque incidunt omnis, dolorum aliquid aliquam obcaecati saepe repellat iste illum modi.',
-            'featured' => asset('uploads/posts/sample.jpg'),
+            'featured' => secure_asset('uploads/posts/sample.jpg'),
         ]);
 
         \App\Post::create([
@@ -49,7 +49,7 @@ class PostsTableSeeder extends Seeder
             'user_id' => '1',
             'category_id' => '2',
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto excepturi in temporibus natus laboriosam mollitia architecto ullam assumenda cumque incidunt omnis, dolorum aliquid aliquam obcaecati saepe repellat iste illum modi.',
-            'featured' => asset('uploads/posts/sample.jpg'),
+            'featured' => secure_asset('uploads/posts/sample.jpg'),
         ]);
 
         \App\Post::create([
@@ -59,7 +59,7 @@ class PostsTableSeeder extends Seeder
             'user_id' => '2',
             'category_id' => '1',
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto excepturi in temporibus natus laboriosam mollitia architecto ullam assumenda cumque incidunt omnis, dolorum aliquid aliquam obcaecati saepe repellat iste illum modi.',
-            'featured' => asset('uploads/posts/sample.jpg'),
+            'featured' => secure_asset('uploads/posts/sample.jpg'),
         ]);
 
         \App\Post::create([
