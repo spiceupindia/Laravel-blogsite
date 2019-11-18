@@ -60,7 +60,7 @@ Route::get('/services','PagesController@services');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/dashboard','DashboardController@index')->name('dashboard');
 
 //one-one relationship user->profile
