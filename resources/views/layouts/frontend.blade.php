@@ -40,7 +40,7 @@
 </head>
 
 
-<body class=" ">
+<body>
 
 <div class="content-wrapper">
 

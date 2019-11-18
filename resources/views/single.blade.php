@@ -203,5 +203,5 @@
 
 
 </div>
-
+    <script src="{{ secure_asset('app/js/animation.velocity.min.js')}}"></script>
 @endsection
