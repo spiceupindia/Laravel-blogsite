@@ -196,4 +196,18 @@
             </div>
         </div>
 
+        <!-- JS Script -->
+
+<script src="{{ secure_asset('app/js/jquery-2.1.4.min.js')}}"></script>
+<script src="{{ secure_asset('app/js/crum-mega-menu.js')}}"></script>
+<script src="{{ secure_asset('app/js/swiper.jquery.min.js')}}"></script>
+<script src="{{ secure_asset('app/js/theme-plugins.js')}}"></script>
+<script src="{{ secure_asset('app/js/main.js')}}"></script>
+<script src="{{ secure_asset('app/js/form-actions.js')}}"></script>
+
+<script src="{{ secure_asset('app/js/velocity.min.js')}}"></script>
+<script src="{{ secure_asset('app/js/ScrollMagic.min.js')}}"></script>
+<script src="{{ secure_asset('app/js/animation.velocity.min.js')}}"></script>
+<script src="{{ secure_asset('js/toastr.min.js')}}"></script>
+
 @endsection
