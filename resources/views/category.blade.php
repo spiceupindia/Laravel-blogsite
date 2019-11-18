@@ -1,5 +1,5 @@
 @extends('layouts.frontend')
-@section('content')
+@section('page')
 
 <div class="stunning-header stunning-header-bg-lightviolet">
     <div class="stunning-header-content">
@@ -10,7 +10,7 @@
 <div class="container">
         <div class="row medium-padding120">
             <main class="main">
-                
+
                 <div class="row">
                             <div class="case-item-wrap">
                                 @if(count($category->posts) > 0)
@@ -33,7 +33,7 @@
                                 @endif
                             </div>
                 </div>
-    
+
                 <!-- End Post Details -->
             </main>
         </div>

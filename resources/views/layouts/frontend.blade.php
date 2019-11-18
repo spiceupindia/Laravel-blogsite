@@ -46,7 +46,7 @@
 
     @include('includes.header')
 
-    @yield('content')
+    @yield('page')
 
 
     @include('includes.form')
