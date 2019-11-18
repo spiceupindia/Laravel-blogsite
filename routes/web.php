@@ -16,7 +16,7 @@ Route::get('/', [
     'as' => 'index'
 ]);
 
-Route::get('/categorys/{category}',[
+Route::get(secure_asset('/categorys/{category}'),[
     'uses' => 'FrontendController@category',
     'as' => 'category.single'
 ]);
