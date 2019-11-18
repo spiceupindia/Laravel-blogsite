@@ -161,7 +161,7 @@
                         </div>
 
 
-                        @include('includes/disqus')
+                        @include('includes.disqus')
 
 
 
@@ -184,8 +184,8 @@
                                 </div>
 
                                 <div class="tags-wrap">
-                                    @foreach($tags as $tag1)
-                                        <a href="{{ route('tag.single',['id' => $tag->id ])}}" class="w-tags-item">{{ $tag1->tag }}</a>
+                                    @foreach($tags as $tag)
+                                        <a href="{{ route('tag.single',['id' => $tag->id ])}}" class="w-tags-item">{{ $tag->tag }}</a>
                                     @endforeach
                                 </div>
                             </div>
