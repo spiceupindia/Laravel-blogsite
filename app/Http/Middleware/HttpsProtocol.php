@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use App;
 
-class HttpsProtocol extends Middleware
+class HttpsProtocol
 {
     /**
      * Handle an incoming request.
