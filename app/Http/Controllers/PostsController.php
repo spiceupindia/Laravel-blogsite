@@ -133,10 +133,11 @@ class PostsController extends Controller
             $post->featured = asset('uploads/posts/'.$featured_new_name);
         }
 
-        $post->title = $request->title;
+       /* $post->title = $request->title;
         $post->content = $request->content;
         $post->category_id = $request->category_id;
-        $post->save();
+        $post->save();*/
+        $post->fill($request->input())->save();
 
         Session::flash('success', 'Post updated successfully.');
         return redirect()->route('posts.index');

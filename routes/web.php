@@ -11,8 +11,6 @@
 |
 */
 
-
-
 URL::forceScheme('https');
 Route::get('/', [
     'uses' => 'FrontendController@index',
