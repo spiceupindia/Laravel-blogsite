@@ -48,7 +48,7 @@ return [
     'headers' => [
      //   Illuminate\Http\Request::HEADER_X_FORWARDED_ALL,
         Illuminate\Http\Request::HEADER_FORWARDED    => null, // not set on AWS or Heroku
-        Illuminate\Http\Request::HEADER_CLIENT_IP    => 'X_FORWARDED_FOR',
+    //    Illuminate\Http\Request::HEADER_CLIENT_IP    => 'X_FORWARDED_FOR',
         Illuminate\Http\Request::HEADER_CLIENT_HOST  => null, // not set on AWS or Heroku
 //        Illuminate\Http\Request::HEADER_CLIENT_HOST  => 'X_FORWARDED_HOST',
         Illuminate\Http\Request::HEADER_CLIENT_PROTO => 'X_FORWARDED_PROTO',
