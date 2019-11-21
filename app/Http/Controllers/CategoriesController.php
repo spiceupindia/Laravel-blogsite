@@ -67,7 +67,7 @@ class CategoriesController extends Controller
      */
     public function edit(Category $category)
     {
-        return view('admin.category.edit')->with('category',$category);
+        return view('admin.category.create')->with('category',$category);
     }
 
     /**
