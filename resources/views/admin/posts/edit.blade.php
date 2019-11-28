@@ -12,8 +12,8 @@
             @csrf
             <div class="form-group">
                 <label for="title">Title</label>
-                <input type="text" name="title" value="{{ $post->title }}" class="form-control">    
-            </div>    
+                <input type="text" name="title" value="{{ $post->title }}" class="form-control">
+            </div>
             <div class="form-group">
                 <label for="content">Content</label>
             <textarea name="content" id="article" cols="5" rows="5" class="form-control">{!! $post->content !!}</textarea>
@@ -29,6 +29,19 @@
                                 >{{ $category->name }}</option>
                         @endforeach
                     </select>
+                </div>
+                <div class="form-group">
+                    <label for="tags">Select tags</label>
+                    @foreach($tags as $tag)
+                        <div class="checkbox">
+                        <label><input type="checkbox" name="tags[]" value="{{ $tag->id }}"
+                            @foreach($post->tags as $ta)
+                                @if($tag->id == $ta->id)
+                                    checked
+                                @endif
+                            @endforeach>{{ $tag->name }}</label>
+                        </div>
+                    @endforeach
                 </div>
             <div class="form-group">
                 <label for="featured">Featured image</label>
