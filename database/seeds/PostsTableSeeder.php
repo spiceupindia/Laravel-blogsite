@@ -19,7 +19,7 @@ class PostsTableSeeder extends Seeder
             'user_id' => '1',
             'category_id' => '1',
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto excepturi in temporibus natus laboriosam mollitia architecto ullam assumenda cumque incidunt omnis, dolorum aliquid aliquam obcaecati saepe repellat iste illum modi.',
-            'featured' => secure_asset('uploads/posts/sample1.jpeg'),
+            'featured' => secure_asset('storage/sample1.jpeg'),
         ]);
 
         \App\Post::create([

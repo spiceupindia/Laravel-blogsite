@@ -64,7 +64,8 @@ class PostsController extends Controller
 
         $featured_new_name = time().$featured->getClientOriginalName();
 
-        $featured->move('uploads/posts',$featured_new_name);
+        Storage::disk('public')->put($featured_new_name, file_get_contents($featured));
+
 
         $user_id = Auth::id();
 
@@ -72,7 +73,7 @@ class PostsController extends Controller
         $post = Post::create([
             'title' => $request->title,
             'content' => $request->content,
-            'featured' => secure_asset('uploads/posts/'.$featured_new_name),
+            'featured' => secure_asset('storage/'.$featured_new_name),
             'category_id' => $request->category_id,
             'slug' => str_slug($request->title),
             'user_id' => $user_id
@@ -129,8 +130,8 @@ class PostsController extends Controller
         {
             $featured = $request->featured;
             $featured_new_name = time(). $featured->getClientOriginalName();
-            $featured->move('uploads/posts', $featured_new_name);
-            $post->featured = asset('uploads/posts/'.$featured_new_name);
+            Storage::disk('public')->put($featured_new_name, file_get_contents($featured));
+            $post->featured = secure_asset('storage/'.$featured_new_name);
         }
 
        /* $post->title = $request->title;
@@ -182,7 +183,7 @@ class PostsController extends Controller
 
         $post = Post::withTrashed()->where('id', $id)->first();
 
-        Storage::delete('uploads/posts/'. $post->featured);
+        Storage::disk('public')->delete($post->featured);
 
         $post->forceDelete();
 
