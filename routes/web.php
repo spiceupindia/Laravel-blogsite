@@ -237,7 +237,7 @@ Route::group(['middleware' => 'auth'], function(){
 
     Route::get('/user/not-admin/{id}',[
         'uses' => 'UsersController@not_admin',
-        'as' => 'user.not-admin'
+        'as' => 'user.not_admin'
     ]);
 
     Route::get('/user/delete/{user}',[

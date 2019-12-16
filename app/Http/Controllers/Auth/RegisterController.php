@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Profile;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -63,10 +64,22 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
+        $profile = Profile::create([
+            'user_id' => $user->id,
+            'avatar' => secure_asset('uploads/avatar/sample.png'),
+            'about' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt excepturi dolores veniam repudiandae? Libero nisi omnis illum! Nihil',
+            'facebook' => 'https://www.facebook.com/sample',
+            'linkedin' => 'https://www.linkedin.com/sample'
+        ]);
+
+        $user->profile()->save($profile);
+
+        return $user;
     }
 }
