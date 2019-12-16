@@ -34,12 +34,7 @@
                     <label for="tags">Select tags</label>
                     @foreach($tags as $tag)
                         <div class="checkbox">
-                        <label><input type="checkbox" name="tags[]" value="{{ $tag->id }}"
-                            @foreach($post->tags as $ta)
-                                @if($tag->id == $ta->id)
-                                    checked
-                                @endif
-                            @endforeach>{{ $tag->name }}</label>
+                        <label><input type="checkbox" name="tags[]" value="{{ $tag->id }}">{{ $tag->name }}</label>
                         </div>
                     @endforeach
                 </div>
